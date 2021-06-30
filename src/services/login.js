@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const login = ({ username, password }) => {
 
-	const apiURL = 'http://localhost:3001/login'
+	const apiURL = 'https://otic-api.herokuapp.com/'
 
 	return axios.post(apiURL, {
 		username,
