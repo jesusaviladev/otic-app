@@ -2,8 +2,14 @@ import React from 'react'
 import './LandingPage.css'
 import banner from './membrete.png'
 import Login from '../../components/Login/Login.js'
+import useSession from '../../hooks/useSession.js'
+import { Redirect } from 'wouter'
 
 const LandingPage = () => {
+
+	const { token } = useSession()
+
+	if(token) return <Redirect to="/dashboard"/>
 
 	return (
 		<>

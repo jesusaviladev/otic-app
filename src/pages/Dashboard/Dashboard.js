@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import UserContext from '../../context/UserContext.js'
+import React from 'react'
 import { Redirect } from 'wouter'
+import useSession from '../../hooks/useSession.js'
 import './Dashboard.css'
 
 const Dashboard = () => {
 
-	const { token, setToken } = useContext(UserContext)
+	const { token } = useSession()
 
 	if(!token) return <Redirect to="/"/>
 

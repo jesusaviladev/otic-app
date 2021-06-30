@@ -28,6 +28,10 @@
 	font-weight: 200;
 }
 
+.form__field--error input {
+	border: 2px solid red;
+}
+
 .form__label{
 	display: block;
 	margin-bottom: 12px;

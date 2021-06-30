@@ -1,17 +1,23 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import Spinner from '../Spinner/Spinner.js'
-import UserContext from '../../context/UserContext.js'
 import { useLocation } from 'wouter'
 import login from '../../services/login.js'
+import useSession from '../../hooks/useSession.js'
 import './Login.css'
 
 const Login = () => {
-	const [ , navigateTo ] = useLocation()
-	const { token, setToken } = useContext(UserContext)
-	console.log(token)
-	const [isLoginLoading, setIsLoginLoading] = useState(false)
-	const [loginError, setLoginError] = useState(false)
 
+	const [ , navigateTo ] = useLocation()
+
+	const { 
+		setToken,
+		isLoginLoading,
+		setIsLoginLoading, 
+		loginError,
+		setLoginError
+	  } = useSession()
+
+	//estados del formulario
 	const [user, setUser] = useState('')
 	const [password, setPassword] = useState('')
 
@@ -52,6 +58,8 @@ const Login = () => {
 
 	if(isLoginLoading) return <div className="login"><Spinner/></div>
 
+	const fieldClass = loginError ? 'form__field--error' : 'form__field'
+
 	return (
 		<>
 			<div className="login">
@@ -59,9 +67,9 @@ const Login = () => {
 					<i className="far fa-user"></i>
 				</div>
 				<h2 className="login__title">Inicia sesión</h2>
-
+				{loginError ? <p className="login__error"> Usuario o contraseña inválidos</p> : null}
 				<form className="form" onSubmit={handleSubmit}>
-					<div className="form__field">
+					<div className={fieldClass}>
 						<label htmlFor="username" 
 						className="form__label">Nombre de usuario</label>
 						<input 
@@ -74,7 +82,7 @@ const Login = () => {
 						/>
 					</div>
 
-					<div className="form__field">
+					<div className={fieldClass}>
 						<label htmlFor="password"
 						className="form__label">Contraseña</label>
 						<input 
