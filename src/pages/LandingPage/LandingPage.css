@@ -1,0 +1,36 @@
+.main-header{
+	text-align: center;
+}
+
+.main-header__banner{
+	background-color: #fff;
+	height: 38px;
+}
+
+.main-header__image{
+	display: block;
+	height: 100%;
+	margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+	.main-header__image{
+		max-width: 600px;
+	}
+}
+
+.main-header__title{
+	margin: 50px 0;
+	font-weight: 400;
+}
+
+.main-header__subtitle{
+	margin-top: 0;
+	margin-bottom: 50px;
+	font-weight: 200;
+}
+
+.main-page{
+	padding: 15px;
+	padding-bottom: 40px;
+}

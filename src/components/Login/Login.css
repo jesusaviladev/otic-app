@@ -1,0 +1,28 @@
+.login__title{
+	text-align: center;
+	font-weight: 200;
+}
+
+.login__icon{
+	text-align: center;
+	font-size: 4rem;
+	color: rgba(255, 255, 255, .7);
+}
+
+.login{
+	color: var(--white);
+	max-width: 600px;
+	height: 481px;
+	margin: 0 auto;
+	background-color: var(--darkBlue);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 8px 8px 25px 1px rgba(0,0,0,.3);
+}
+
+@media screen and (min-width: 768px) {
+	.login{
+		padding: 50px;
+	}
+}
+
