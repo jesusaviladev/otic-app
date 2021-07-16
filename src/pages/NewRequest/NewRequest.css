@@ -1,0 +1,18 @@
+@media screen and (min-width: 1024px) {
+	.new-request{
+		padding: 30px;
+	}
+}
+
+.new-request__title{
+	text-align: center;
+}
+
+.new-request__radio-group{
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 16px;
+}
+
+

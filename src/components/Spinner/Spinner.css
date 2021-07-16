@@ -8,9 +8,9 @@
 .spinner{
   width: 120px;
   height: 120px;
-  border: 12px solid rgba(0,0,0,.2);
+  border: 12px solid rgba(0,0,0,.4);
   border-radius: 50%;
-  border-left-color: var(--green);
+  border-left-color: var(--mediumPurple);
   animation: spin 1s ease-in infinite; 
 }
 

@@ -1,0 +1,14 @@
+.requests{
+	padding: 30px;
+}
+
+@media screen and (max-width: 640px) {
+	.requests {
+		overflow-x: auto;
+	}
+}
+
+
+.requests__title{
+	text-align: center;
+}

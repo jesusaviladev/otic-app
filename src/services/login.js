@@ -1,8 +1,9 @@
 import axios from 'axios'
+import { API_URL } from './config.js'
 
 const login = ({ username, password }) => {
 
-	const apiURL = 'https://otic-api.herokuapp.com/login'
+	const apiURL = `${API_URL}/login`
 
 	return axios.post(apiURL, {
 		username,

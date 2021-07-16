@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
 }
 
@@ -15,7 +15,7 @@ img{
 input{
   border: none;
   outline: none;
-  padding: 10px 20px;
+  padding: 10px 14px;
   font-family: inherit;
   color: #222;
 }

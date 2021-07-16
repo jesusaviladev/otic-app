@@ -1,0 +1,27 @@
+.table{
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+	text-align: center;
+    border-collapse: collapse;
+    background-color: #212529;
+}
+
+.table__head{
+	background-color: #007bff;
+}
+
+.table__heading{
+	color: #fff;
+}
+
+.table__cell, .table__heading{
+	border-bottom: 1px solid #32383e;
+	padding: .75rem;
+}
+
+.table__cell{
+	font-weight: 300;
+}
+
+

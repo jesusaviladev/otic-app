@@ -1,0 +1,10 @@
+.main{
+	min-height: 100vh;
+	display: grid;
+}
+
+@media screen and (min-width: 1024px) {
+	.main{
+		grid-template-columns: 300px 1fr;
+	}
+}

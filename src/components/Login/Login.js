@@ -1,21 +1,11 @@
 import React, { useState } from 'react'
 import Spinner from '../Spinner/Spinner.js'
-import { useLocation } from 'wouter'
-import login from '../../services/login.js'
 import useSession from '../../hooks/useSession.js'
 import './Login.css'
 
 const Login = () => {
-
-	const [ , navigateTo ] = useLocation()
-
-	const { 
-		setToken,
-		isLoginLoading,
-		setIsLoginLoading, 
-		loginError,
-		setLoginError
-	  } = useSession()
+	//recuperamos logica para la sesion del hook
+	const { logUser, isLoginLoading, loginError } = useSession()
 
 	//estados del formulario
 	const [user, setUser] = useState('')
@@ -32,28 +22,7 @@ const Login = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 
-		setIsLoginLoading(true)
-
-		login({ username: user, password: password })
-			.then(response => {
-
-				setIsLoginLoading(false)
-
-				const { token } = response.data
-
-				setToken(token)
-
-				navigateTo('/dashboard')
-
-				window.sessionStorage.setItem('token', token)
-
-			})
-			.catch(error => {
-				console.log(error)
-
-				setIsLoginLoading(false)
-				setLoginError(true)
-			})
+		logUser({ user, password })
 	}
 
 	if(isLoginLoading) return <div className="login"><Spinner/></div>
