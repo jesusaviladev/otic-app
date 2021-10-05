@@ -1,27 +1,48 @@
 .table{
 	width: 100%;
-	overflow: hidden;
 	box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
 	text-align: center;
     border-collapse: collapse;
-    background-color: #212529;
+    background-color: #fff;
+    color: #222;
+    border-radius: 4px;
 }
 
 .table__head{
-	background-color: #007bff;
+	background-color: var(--mediumBlue);
+	color: #eee;
 }
 
 .table__heading{
-	color: #fff;
+	font-weight: 500;
+}
+
+.table__row{
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgba(0,0,0,.12);
+}
+
+.table__row:nth-child(2n+2){
+	background-color: #f1f1f1;
+}
+
+.table__row:hover{
+	background-color: rgba(117, 145, 186, .3);
 }
 
 .table__cell, .table__heading{
-	border-bottom: 1px solid #32383e;
-	padding: .75rem;
+	padding: 0 16px;
+    height: 56px;
+
 }
 
 .table__cell{
-	font-weight: 300;
+	font-weight: 400;
+}
+
+.checkbox{
+
 }
 
 

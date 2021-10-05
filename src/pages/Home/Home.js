@@ -1,11 +1,12 @@
 import React from 'react'
+import PageTitle from '../../components/PageTitle/PageTitle.js'
 import './Home.css'
 
 const Home = () => {
 
 	return (
 		<section className="home">
-			<h1>Home</h1>
+			<PageTitle content="Bienvenido/a, Jesus"></PageTitle>
 		</section>
 		)
 }

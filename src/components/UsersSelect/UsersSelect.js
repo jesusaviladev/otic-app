@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import getUsers from '../../services/getUsers.js'
 import { Field } from 'formik'
 
-const UsersSelect = () => {
+const UsersSelect = ({ token = null }) => {
 
 	const [ users, setUsers ] = useState([])
 
 	useEffect(() => {
 
-		getUsers()
+		getUsers(token)
 			.then(response => {
 
 				const usersData = response.data
@@ -18,13 +18,13 @@ const UsersSelect = () => {
 			})
 			.catch(error => console.log(error))
 
-	}, [])
+	}, [token])
 
 	return (
 		<div className="form__field">
 
 			<label htmlFor="user" className="form__label">
-				Asignar usuario
+				Asignar usuario (Opcional)
 			</label>
 
 			<Field as="select" name="user" id="user" className="form__select">

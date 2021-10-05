@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar.js'
 import Sidebar from '../../components/Sidebar/Sidebar.js'
 import Home from '../Home/Home.js'
 import Requests from '../Requests/Requests.js'
-import NewRequest from '../NewRequest/NewRequest.js'
+import RequestDetails from '../RequestDetails/RequestDetails.js'
 import { Redirect, Switch, Route, useRouteMatch } from 'react-router-dom'
 import './Dashboard.css'
 
@@ -39,7 +39,7 @@ const Dashboard = () => {
 
 						<Route exact path={`${path}/requests`} component={Requests}/>
 
-						<Route exact path={`${path}/requests/new`} component={NewRequest}/>
+						<Route exact path={`${path}/requests/:id`} component={RequestDetails}/>
 
 				</Switch>
 

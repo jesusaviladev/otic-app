@@ -7,6 +7,7 @@
 	transition: transform .5s;
 	padding: 12px;
 	box-shadow: 2px 2px 11px -4px #2b2e3d;
+	color: var(--gray);
 }
 
 .menu--show{
@@ -41,8 +42,7 @@
 
 @media screen and (min-width: 768px) {
 	.menu-sidebar__item:hover{
-		background-color: var(--mediumPurple);
-		color: var(--darkBlue)
+		background-color: #232735;
 	}
 }
 
@@ -56,8 +56,11 @@
 }
 
 .active{
-	background-color: var(--mediumPurple);
-	color: var(--darkBlue);
+	background-color: #232735;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left: 5px solid #00a5f0;
+	color: #fff;
 }
 
 .menu-sidebar__icon{

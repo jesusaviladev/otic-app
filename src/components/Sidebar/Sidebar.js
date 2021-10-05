@@ -29,14 +29,6 @@ const Sidebar = ({ isActive, toggleMenu }) => {
 					</NavLink>
 				</li>
 				<li className="menu-sidebar__item">
-					<NavLink exact to={`${url}/requests/new`} className="menu-sidebar__link">
-						<span className="menu-sidebar__icon">
-							<i className="fas fa-file-upload"></i>
-						</span>
-						Nueva solicitud
-					</NavLink>
-				</li>
-				<li className="menu-sidebar__item">
 					<NavLink exact to="" className="menu-sidebar__link">
 						<span className="menu-sidebar__icon">
 							<i className="far fa-clipboard"></i>

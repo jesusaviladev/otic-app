@@ -2,17 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './Modal.css'
 
-const Modal = ({ children, onClose, message }) => {
+const Modal = ({ children, onClose }) => {
 
 
 	return ReactDOM.createPortal(
 
-		<div className="modal" onClick={onClose}>
+		<div className="modal">
 			<div className="modal__container">
 				<button className="modal__button">
 					<i className="fas fa-times" onClick={onClose}></i>
-				</button>
-				<p className="modal__message">{message}</p>
+				</button>					
 				{ children }
 			</div>
 		</div>

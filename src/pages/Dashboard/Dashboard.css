@@ -1,6 +1,8 @@
 .main{
 	min-height: 100vh;
 	display: grid;
+	background-color: #ebf0f4;
+	color: #2f3035;
 }
 
 @media screen and (min-width: 1024px) {

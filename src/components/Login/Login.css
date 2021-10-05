@@ -21,7 +21,7 @@
 }
 
 .login__error{
-	color: crimson;
+	color: #f32f2f;
 	text-align: center;
 	font-weight: 200;
 	margin: 5px 0;

@@ -65,7 +65,7 @@
 
 @media screen and (min-width: 768px) {
 	.dropdown__item:hover{
-		background-color: var(--mediumPurple);
+		background-color: var(--blue);
 		color: var(--black);
 	}
 }

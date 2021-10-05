@@ -20,13 +20,13 @@
 }
 
 .main-header__title{
-	margin: 50px 0;
+	margin: 80px 0 30px;
 	font-weight: 400;
 }
 
 .main-header__subtitle{
 	margin-top: 0;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	font-weight: 200;
 }
 
